@@ -1,0 +1,26 @@
+import random 
+
+secret = random.randint(1,100)
+#integers from 1-20
+name = input("whats your name? ")
+print("ok, {} The number I am thinking of is between 1 to 100. ".format(name))
+
+tries = 15
+count = 0
+while count < tries:
+  guess = input("take a guess")
+  guess = int(guess)
+
+  if guess > secret:
+    print("your number is too high!")
+#if integer guessed is high
+  elif guess < secret: 
+    print("your number is too low!")
+#if integer guessed is low
+  elif guess == secret:
+    print("Yay u got it right!".format(count))
+    break 
+#Integer guess correctly
+  elif count  == 15:
+    print("just up")
+  count = count + 1
